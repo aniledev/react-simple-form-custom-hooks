@@ -6,13 +6,15 @@ export const useFormInput = (initialValue) => {
   // Within the function implement useState for updating and accessing the value of the form
   const [value, setValue] = useState(initialValue);
 
-  // Create a handleChange function that updates the state value
-  // TODO: Implement type checking for event object
-  const handleChange = (param) => {
-    // Check if the object is an event with the target property
-    const newValue = param.target ? param.target.value : param;
-    setValue(newValue);
-  };
+	// Create a handleChange function that updates the state value
+	const handleChange = (param: Event | string) => {
+		// Check if param is string or event object 
+    if (typeof param === 'string') {
+      setValue(param);
+    } else {
+      setValue(param.target.value);
+    }
+	};
 
   // Return the value and the handle change function in an object
   return {
