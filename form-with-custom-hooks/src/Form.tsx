@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
-import {useFormInput} from './use-form-input.js';
+import React, { useState } from 'react';
+// @ts-ignore
+import {useFormInput} from './use-form-input.tsx';
 import './Form.css';
 
 type Event = {

@@ -1,13 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client.js';
+import ReactDOM from 'react-dom';
 import './Form.css';
-import Form from './Form.js';
-import reportWebVitals from './report-web-vitals.js';
+// @ts-ignore 
+import Form from './Form.tsx';
+// @ts-ignore 
+import reportWebVitals from './report-web-vitals.tsx';
 
 const docElement = document.querySelector('#root');
 
 if (docElement) {
-	const root: ReactDOM.Root = ReactDOM.createRoot(docElement);
+  // @ts-ignore https://github.com/DefinitelyTyped/DefinitelyTyped/issues/43848
+	const root = ReactDOM.createRoot(docElement);
 	root.render(
 		<React.StrictMode>
 			<Form />
