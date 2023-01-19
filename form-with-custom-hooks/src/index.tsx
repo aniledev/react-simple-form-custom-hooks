@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client.js';
 import './Form.css';
-import Form from './Form';
-import reportWebVitals from './reportWebVitals';
+import Form from './Form.js';
+import reportWebVitals from './report-web-vitals.js';
 
 const docElement = document.querySelector('#root');
 
 if (docElement) {
-	const root = ReactDOM.createRoot(docElement);
+	const root: ReactDOM.Root = ReactDOM.createRoot(docElement);
 	root.render(
 		<React.StrictMode>
 			<Form />

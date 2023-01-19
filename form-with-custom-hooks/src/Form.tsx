@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useFormInput} from './useFormInput';
+import {useFormInput} from './use-form-input.js';
 import './Form.css';
 
 type Event = {
@@ -12,8 +12,8 @@ const Form = () => {
 	const {value: lastName, onChange: lastNameChange} = useFormInput('');
 	const [fullName, setFullName] = useState('');
 
-	const onSubmitClick = (e: Event) => {
-		e.preventDefault();
+	const onSubmitClick = (event: Event) => {
+		event.preventDefault();
 		setFullName(`${firstName} ${lastName}`);
 	};
 
