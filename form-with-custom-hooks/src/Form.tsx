@@ -9,6 +9,7 @@ const Form = () => {
   const [fullName, setFullName] = useState("");
 
   const onSubmitClick = (e) => {
+    // TODO: Implement type checking for event object
     e.preventDefault();
     setFullName(`${firstName} ${lastName}`);
   };
