@@ -2,17 +2,20 @@ import React, { useState } from "react";
 import { useFormInput } from "./useFormInput";
 import './Form.css';
 
+type Event = {
+	preventDefault: () => void
+};
+
 const Form = () => {
   // Hook state management and custon hooks for form inputs
   const { value: firstName, onChange: firstNameChange } = useFormInput("");
   const { value: lastName, onChange: lastNameChange } = useFormInput("");
   const [fullName, setFullName] = useState("");
 
-  const onSubmitClick = (e) => {
-    // TODO: Implement type checking for event object
-    e.preventDefault();
-    setFullName(`${firstName} ${lastName}`);
-  };
+	const onSubmitClick = (e: Event) => {
+		e.preventDefault();
+		setFullName(`${firstName} ${lastName}`);
+	};
 
   const onResetClick = () => {
     firstNameChange("");
