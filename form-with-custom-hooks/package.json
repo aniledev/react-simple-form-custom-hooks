@@ -31,6 +31,19 @@
       "react-app/jest"
     ]
   },
+  "xo": {
+    "unicorn/filename-case": [
+      "error",
+      {
+        "cases": {
+          "camelCase": true,
+          "pascalCase": true,
+          "kebabCase": false
+        }
+      }
+    ],
+    "@typescript-eslint/no-redundant-type-constituents": "warn"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
